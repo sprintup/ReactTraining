@@ -14,7 +14,8 @@ ReactDOM.render(
   // Browser is not going to render tags automatically in the browser, but because we're using create React app there is a tool working behind the scenes called Babel. Babel lets you write code that is not supported yet (transpiler). It takes the tags and turns them into createElement calls. 
   // JSX looks like HTML, but it is kind of different. 
   // Can add attributes directly to your tags with JSX
-  <h1 id="heading">Hello from {city.name} is in {city.country}</h1>,
+  // classes use 'className' instead of class 
+  <h1 id="heading" className="cool-text">Hello from {city.name} is in {city.country}</h1>,
   document.getElementById('root')
 );
 
