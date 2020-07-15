@@ -10,12 +10,12 @@ const lakeList = [
 
 const list = [1, 2, 3, 4, 5]; // How to add a key for a list of numbers
 
-function App({items}){
+function App({items, i}){
   // working on removing the error about each child needing a unique key property. Need to add a key. Keys help React keep track of which items have changed (added, removed). A key is an identifier for a dynamically generated element. 
   return (
     <ul>
-      {items.map(item =>(
-        <li key={item.toString()}>{item}</li>
+      {items.map((item, i) =>(
+        <li key={i}>{item}</li>
       ))}
     </ul>
   )
