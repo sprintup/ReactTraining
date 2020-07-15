@@ -4,12 +4,18 @@ import './index.css';
 
 
 function App(){
-  const [status] = useState("Open");
+  // initial status is open
+  // useState returns a pair: 
+  //  status = state value (Open) -> remmeber array destructuring is allowing us give this value a name
+  //  second value is a function to update the state, we can call it setStatus
+
+  const [status, setStatus] = useState("Open");
 
   //Status will be a state value that reflects the current status for this application
   return (
     <div>
       <h1>Status: {status}</h1> 
+      <button onClick={() => setStatus("Closed")}>Closed</button>
     </div>
   );
 }
