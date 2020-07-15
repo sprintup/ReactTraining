@@ -8,7 +8,7 @@ function Hello(props){
     // Can wrap more than one tag in a set of paranthesis
     <div>
       <h1>Welcome to {props.library}!</h1>
-      <p>Let's build something cool.</p>
+      <p>{props.message}</p>
     </div>
   )
 }
@@ -16,8 +16,9 @@ function Hello(props){
 ReactDOM.render(
   // A component is a function that returns some UI (collection of React Elements). The self closing Hello JSX tags below call the fuction above. Also, components have to be capitalized
   // Props (properties) is an object in React that contain properties about the component. Can display dynamic data within a component.
-  // 'React' library value accepts dynamic values (Next.js, Vue), so it'll update in the H1
-  <Hello library="React" />,
+  // 'React' library value accepts dynamic values (Next.js, Vue), so it'll update in the H1 (in this case React)
+  // "Have Fun! is rendered in the paragraph tag"
+  <Hello library="React" message="Have Fun!"/>,
   document.getElementById('root')
 );
 
