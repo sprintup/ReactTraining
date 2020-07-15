@@ -2,20 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-let city = {
-  name: "Madrid",
-  country: "Spain"
-};
+function Hello(){
+  return (
+    // Can wrap more than one tag in a set of paranthesis
+    <div>
+      <h1>Welcome to React!</h1>
+      <p>Let's build something cool.</p>
+    </div>
+  )
+}
 // ReactDOM.render takes to arguments, first the argument is the element we want to create, then the second argument is where we want to render that element
 ReactDOM.render(
-  // React.createElement(tag that we want to create, properties we want this element to have, any children)
-  // Possible to render multiple elements using createElement calls by making adjustments to the third argument (children)
-  // JSX (Javascript as XML) is a language extension that allows you to write tags directly in the javascript
-  // Browser is not going to render tags automatically in the browser, but because we're using create React app there is a tool working behind the scenes called Babel. Babel lets you write code that is not supported yet (transpiler). It takes the tags and turns them into createElement calls. 
-  // JSX looks like HTML, but it is kind of different. 
-  // Can add attributes directly to your tags with JSX
-  // classes use 'className' instead of class 
-  <h1 id="heading" className="cool-text">Hello from {city.name} is in {city.country}</h1>,
+  // A component is a function that returns some UI (collection of React Elements). The self closing Hello JSX tags below call the fuction above. Also, components have to be capitalized
+  <Hello />,
   document.getElementById('root')
 );
 
