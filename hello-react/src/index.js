@@ -31,4 +31,13 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+// this is a way to assign name to values instead of accessing by index
+const [first, second, third] = [
+  "popcorn",
+  "pretzels",
+  "pineapple"
+]
 
+console.log(first); //popcorn
+console.log(second);
+console.log(third);
