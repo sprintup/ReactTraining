@@ -14,10 +14,11 @@ function SkiResort() {
   );
 }
 
-function App(){
+function App({name}){
   return (
     //React.Fragments are intended to be used to deal with the issue of adjacent components
     <>
+      <h1>{name}</h1>
       <Lake />
       <SkiResort />
     </>
@@ -26,10 +27,7 @@ function App(){
 // ReactDOM.render takes to arguments, first the argument is the element we want to create, then the second argument is where we want to render that element
 //when the app is rendered, add the property 'season' for summer, or winter
 ReactDOM.render(
-  <>
-    <Lake />
-    <SkiResort />
-  </>,
+  <App name ="GraphQL"/>,
   document.getElementById('root')
 );
 
