@@ -9,6 +9,7 @@ function Hello(props){
     <div>
       <h1>Welcome to {props.library}!</h1>
       <p>{props.message}</p>
+      <p>{props.number} Props Total</p>
     </div>
   )
 }
@@ -18,7 +19,7 @@ ReactDOM.render(
   // Props (properties) is an object in React that contain properties about the component. Can display dynamic data within a component.
   // 'React' library value accepts dynamic values (Next.js, Vue), so it'll update in the H1 (in this case React)
   // "Have Fun! is rendered in the paragraph tag"
-  <Hello library="React" message="Have Fun!"/>,
+  <Hello library="React" message="Have Fun!" number={3}/>,
   document.getElementById('root')
 );
 
