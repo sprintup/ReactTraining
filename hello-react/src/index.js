@@ -3,18 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 const lakeList = [
-  "Echo Lake",
-  "Maud Lake",
-  "Cascade Lake",
+  { id: "1", name: "Echo", trailhead: "Echo" },
+  { id: "2", name: "Maud", trailhead: "Wrights" },
+  { id: "3", name: "Velma", trailhead: "Bayview" },
 ];
 
 function App({lakes}){
   return (
-    <ul>
-      {lakes.map(lake => (
-      <li>{lake}</li>
+    <div>
+      {lakes.map(lake =>(
+        <div>
+          <h2>{lake.name}</h2>
+          <p>Accessed by: {lake.trailhead}</p>
+        </div>
       ))}
-    </ul>
+    </div>
   )
 }
 // ReactDOM.render takes to arguments, first the argument is the element we want to create, then the second argument is where we want to render that element
