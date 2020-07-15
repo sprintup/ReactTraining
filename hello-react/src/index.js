@@ -7,7 +7,14 @@ import './index.css';
 ReactDOM.render(
   //React.createElement(tag that we want to create, properties we want this element to have, any children)
   // Possible to render multiple elements using createElement calls by making adjustments to the third argument (children)
-  React.createElement("div", {style:{color:"red"}}, React.createElement("h1",null,"hi!")),
+  React.createElement(
+    "ul", 
+  {style:{color:"red"}}, 
+  React.createElement("li",null,"Hot Dogs"),
+  React.createElement("li",null,"Hamburgers"),
+  React.createElement("li",null,"Pizza"),
+  React.createElement("li",null,"Sushi"),
+  ),
   document.getElementById('root')
 );
 
