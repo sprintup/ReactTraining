@@ -32,12 +32,12 @@ ReactDOM.render(
 );
 
 // this is a way to assign name to values instead of accessing by index
-const [first, second, third] = [
+// using commas as placeholders
+const [, , third] = [
   "popcorn",
   "pretzels",
   "pineapple"
 ]
 
-console.log(first); //popcorn
-console.log(second);
-console.log(third);
+
+console.log(third); // pineapple
