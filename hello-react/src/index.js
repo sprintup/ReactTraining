@@ -17,10 +17,10 @@ function SkiResort() {
 function App(){
   return (
     //React.Fragments are intended to be used to deal with the issue of adjacent components
-    <React.Fragment>
+    <>
       <Lake />
       <SkiResort />
-    </React.Fragment>
+    </>
   );
 }
 // ReactDOM.render takes to arguments, first the argument is the element we want to create, then the second argument is where we want to render that element
