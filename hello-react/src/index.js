@@ -26,7 +26,10 @@ function App(){
 // ReactDOM.render takes to arguments, first the argument is the element we want to create, then the second argument is where we want to render that element
 //when the app is rendered, add the property 'season' for summer, or winter
 ReactDOM.render(
-  <App />,
+  <>
+    <Lake />
+    <SkiResort />
+  </>,
   document.getElementById('root')
 );
 
