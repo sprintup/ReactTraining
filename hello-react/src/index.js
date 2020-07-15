@@ -2,22 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-function Lake({name}) {
-  return <h1>{name}</h1>
-}
+const lakeList = [
+  "Echo Lake",
+  "Maud Lake",
+  "Cascade Lake",
+];
 
-function App(){
+function App(props){
   return (
-    <div>
-      <Lake name="Lake Tahoe" />
-      <Lake name="Angora Lake" />
-      <Lake name="Shirley Lake" />
-    </div>
+    <ul>
+      {props.lakes.map(lake => (
+      <li>{lake}</li>
+      ))}
+    </ul>
   )
 }
 // ReactDOM.render takes to arguments, first the argument is the element we want to create, then the second argument is where we want to render that element
 ReactDOM.render(
-  <App />,
+  <App lakes={lakeList}/>,
   document.getElementById('root')
 );
 
