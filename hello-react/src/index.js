@@ -20,9 +20,10 @@ ReactDOM.render(
   // "Have Fun! is rendered in the paragraph tag"
   // Can pass functions to JSX Templates
   // Common to see values from props object destructured for brevity
+  // React component as a function that takes in data as an argument and then returns react elements to creat a user interface.
   <Hello 
     library="React" 
-    message="Have Fun!" 
+    message="add dynamic data!" 
     number={3} 
   />,
   document.getElementById('root')
