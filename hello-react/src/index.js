@@ -9,10 +9,11 @@ const lakeList = [
 ];
 
 function App({lakes}){
+  // working on removing the error about each child needing a unique key property. Need to add a key. Keys help React keep track of which items have changed (added, removed). A key is an identifier for a dynamically generated element. 
   return (
     <div>
       {lakes.map(lake =>(
-        <div>
+        <div key={lake.id}>
           <h2>{lake.name}</h2>
           <p>Accessed by: {lake.trailhead}</p>
         </div>
