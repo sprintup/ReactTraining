@@ -3,15 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 function Checkbox() {
-  const [checked, setChecked] = useState(false)
+  const [checked, setChecked] = useState(false);
+  // reducer function: takes in the current state and returns a new state
+  function toggle() {
+    setChecked(checked => !checked)
+  }
   return(
     <>
     <input 
       type="checkbox" 
       value="checked"
-      onChange={() => 
-        setChecked(checked => !checked)
-      }
+      onChange={toggle}
     />
     {checked ? "checked" : "not checked"}
     </>
