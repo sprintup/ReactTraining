@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     console.log(`field 2: ${val2}`)
-  },[val2]);
+  },[val, val2]);
 
   return (
     <>
