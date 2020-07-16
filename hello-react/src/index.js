@@ -7,13 +7,14 @@ function App() {
   const [val2, setVal2] = useState("");
 
   //useEffect will console log the value of each one of these fields
+  // the second argument sent to useEffect is called the dependency array. In the array you use the state variable that we want to listen for changes in. In other words this useEffect is only going to fire when the changing first value
   useEffect(() => {
     console.log(`field 1: ${val}`)
-  });
+  },[val]);
 
   useEffect(() => {
     console.log(`field 2: ${val2}`)
-  });
+  },[val2]);
 
   return (
     <>
