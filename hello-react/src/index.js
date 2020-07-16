@@ -13,13 +13,17 @@ function GitHubUser({login}) {
   }, []);
   if(data){
     return (
-      <div>{JSON.stringify(data)}</div>
+      <div>
+        <h1>{data.login}</h1>
+        <img src={data.avatar_url} width={100} />
+      </div>
     )
   }
   return null;
 }
 
 function App() {
+  // pass in own data, moontahoe or moonhighway
   return <GitHubUser login="moonhighway" />
 }
 // ReactDOM.render takes to arguments, first the argument is the element we want to create, then the second argument is where we want to render that element
