@@ -3,37 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 
-function App(){
-  // initial status is open
-  // useState returns a pair: 
-  //  status = state value (Open) -> remmeber array destructuring is allowing us give this value a name
-  //  second value is a function to update the state, we can call it setStatus
-
-  const [year, setYear] = useState(2050);
-  const [manager, setManager] = useState("Alex");
-  const [status, setStatus] = useState("Open");
-
-  //Status will be a state value that reflects the current status for this application
+function Checkbox(){
+  const [checked, setChecked] = useState(false)
   return (
     <>
-      <div>
-        <h1>{year}</h1>
-        <button onClick={()=>setYear(year + 1)}>New Year!</button>
-      </div>
-      <div>
-        <h1>Manager on Duty: {manager}</h1>
-        <button onClick={() => setManager("Rachel")}> New Manger </button>
-      </div>
-      <div>
-        <h1>Status: {status}</h1> 
-        <button onClick={() => setStatus("Open")}>Open</button>
-        <button onClick={() => setStatus("Closed")}>Closed</button>
-      </div>
+      <input type="checkbox" value={checked} onChange={() => 
+        setChecked(checked => !checked)
+      }/>
+      {checked ? "checked" : "not checked"}
     </>
   );
 }
 // ReactDOM.render takes to arguments, first the argument is the element we want to create, then the second argument is where we want to render that element
 ReactDOM.render(
-  <App />,
+  <Checkbox />,
   document.getElementById('root')
 );
