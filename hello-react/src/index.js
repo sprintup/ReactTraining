@@ -5,11 +5,12 @@ import './index.css';
 
 function Checkbox(){
   const [checked, setChecked] = useState(false);
-  // another React hook, useEffect, allows us to perform side effects inside of our function components
-  // useEffect(() => {
-  // });
-  // this alert has nothing to do with the component or the DOM
-  alert(`checked: ${checked.toString()}`);
+
+  // another React hook, useEffect, allows us to perform side effects inside of our function components. The things that we want the component to do aside from return UI are called effects. (ex. alert, console.log, interaction with browser) -> these are not part of the render
+  useEffect(() => {
+    // this alert has nothing to do with the component or the DOM
+    alert(`checked: ${checked.toString()}`);
+  });
   return (
     <>
       <input type="checkbox" value={checked} onChange={() => 
