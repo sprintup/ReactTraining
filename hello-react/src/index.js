@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react'; // incorporating useState hook. A hook is a function that allows you to add functionality to a component
+import React, { useReducer } from 'react'; // incorporating useState hook. A hook is a function that allows you to add functionality to a component
 import ReactDOM from 'react-dom';
 import './index.css';
 
 function Checkbox() {
-  const [checked, setChecked] = useState(false);
-  // reducer function: takes in the current state and returns a new state
-  function toggle() {
-    setChecked(checked => !checked)
-  }
+  const [checked, toggle] = useReducer(
+    checked => !checked, 
+    false
+  );
+
   return(
     <>
     <input 
