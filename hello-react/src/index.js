@@ -9,13 +9,17 @@ function App(){
   //  status = state value (Open) -> remmeber array destructuring is allowing us give this value a name
   //  second value is a function to update the state, we can call it setStatus
 
-
+  const [year, setYear] = useState(2050);
   const [manager, setManager] = useState("Alex");
   const [status, setStatus] = useState("Open");
 
   //Status will be a state value that reflects the current status for this application
   return (
     <>
+      <div>
+        <h1>{year}</h1>
+        <button onClick={()=>setYear(year + 1)}>New Year!</button>
+      </div>
       <div>
         <h1>Manager on Duty: {manager}</h1>
         <button onClick={() => setManager("Rachel")}> New Manger </button>
