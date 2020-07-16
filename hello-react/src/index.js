@@ -1,10 +1,15 @@
-import React, { useState } from 'react'; // incorporating useState hook. A hook is a function that allows you to add functionality to a component
+import React, { useState, useEffect } from 'react'; // incorporating useState hook. A hook is a function that allows you to add functionality to a component
 import ReactDOM from 'react-dom';
 import './index.css';
 
 
 function Checkbox(){
-  const [checked, setChecked] = useState(false)
+  const [checked, setChecked] = useState(false);
+  // another React hook, useEffect, allows us to perform side effects inside of our function components
+  // useEffect(() => {
+  // });
+  // this alert has nothing to do with the component or the DOM
+  alert(`checked: ${checked.toString()}`);
   return (
     <>
       <input type="checkbox" value={checked} onChange={() => 
