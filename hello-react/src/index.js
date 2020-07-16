@@ -2,26 +2,35 @@ import React, { useState, useEffect } from 'react'; // incorporating useState ho
 import ReactDOM from 'react-dom';
 import './index.css';
 
+function App() {
+  const [val, setVal] = useState("");
+  const [val2, setVal2] = useState("");
 
-function Checkbox(){
-  const [checked, setChecked] = useState(false);
-
-  // another React hook, useEffect, allows us to perform side effects inside of our function components. The things that we want the component to do aside from return UI are called effects. (ex. alert, console.log, interaction with browser) -> these are not part of the render
+  //useEffect will console log the value of each one of these fields
   useEffect(() => {
-    // this alert has nothing to do with the component or the DOM
-    alert(`checked: ${checked.toString()}`);
+    console.log(`field 1: ${val}`)
   });
+
+  useEffect(() => {
+    console.log(`field 2: ${val2}`)
+  });
+
   return (
     <>
-      <input type="checkbox" value={checked} onChange={() => 
-        setChecked(checked => !checked)
-      }/>
-      {checked ? "checked" : "not checked"}
+      <label>
+        Favorite Phrase:
+        <input value={val} onChange={e => setVal(e.target.value)}/>
+      </label>
+      <br />
+      <label>
+        Second Favorite Phrase:
+        <input value={val2} onChange={e => setVal2(e.target.value)}/>
+      </label>
     </>
-  );
+  )
 }
 // ReactDOM.render takes to arguments, first the argument is the element we want to create, then the second argument is where we want to render that element
 ReactDOM.render(
-  <Checkbox />,
+  <App />,
   document.getElementById('root')
 );
